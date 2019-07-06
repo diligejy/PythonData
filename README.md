@@ -3,6 +3,7 @@
 
 ## pythonwarmingup
 - Edwith 최성철 교수님의 머신러닝을 위한 Python 실습 및 정리
+
   (url : https://www.edwith.org/aipython/joinLectures/14365)
 
 ## mda
