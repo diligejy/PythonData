@@ -8,3 +8,8 @@
 
 ## mda
 - 모두의 데이터분석 with Python 실습 및 정리(url : https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=189862640)
+
+## Backend
+- 파이썬 백엔드 실습 및 정리
+
+
