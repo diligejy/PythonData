@@ -15,4 +15,5 @@
 ## Finance
 - 금융 분석 관련 
 
-
+## python_automate
+- 파이썬 업무자동화 관련
