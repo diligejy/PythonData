@@ -6,6 +6,8 @@ html = requests.get(url)
 soup = BeautifulSoup(html.text, 'html.parser')
 imax = soup.select_one('span.imax')
 if(imax):
-    print('IMAX 예매가 열렸습니다')
+    imax = imax.find_parent('div', class_ = 'col-times')
+    title = imax.select_one('div.info-movie > a > strong').text.strip()
+    print(title + ' IMAX 예매가 열렸습니다')
 else:
     print('IMAX 예매가 아직 열리지 않았습니다.')
