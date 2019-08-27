@@ -12,9 +12,9 @@ RED = (255, 0, 0)
 
 class Car:
     image_car = ['RacingCar01.png','RacingCar02.png','RacingCar03.png','RacingCar04.png','RacingCar05.png',\
-                'RacingCar06.png','RacingCa52r07.png','RacingCar08.png','RacingCar09.png','RacingCar10.png',\
+                'RacingCar06.png','RacingCar07.png','RacingCar08.png','RacingCar09.png','RacingCar10.png',\
                 'RacingCar11.png','RacingCar12.png','RacingCar13.png','RacingCar14.png','RacingCar15.png',\
-                'RacingCar16.png','RacingCar17.png','RacingCar18.png','RacingCar19.png','RacingCar20.png']
+                'RacingCar16.png','RacingCar17.png','RacingCar18.png','RacingCar19.png','RacingCar20.png',]
 
     def __init__(self, x = 0, y = 0, dx = 0, dy = 0):
         self.image = ''
@@ -42,31 +42,53 @@ class Car:
             self.x -= self.dx
 
     def check_crash(self, car):
-        if (self.x + self.width > car.x) and (self.x < car.x + car.width) and (self.y < car.y + car.height) and (self.y + self.height > self.y)
+        if (self.x + self.width > car.x) and (self.x < car.x + car.width) and (self.y < car.y + car.height) and (self.y + self.height > self.y):
             return True
         else:
             return False
-    
+
+def draw_main_menu():
+    draw_x = (WINDOW_WIDTH / 2) - 200
+    draw_y = (WINDOW_HEIGHT / 2)
+    image_intro = pygame.image.load('PyCar.png')
+    screen.blit(image_intro, [draw_x, draw_y - 280])
+    font_40 = pygame.font.SysFont('FixedSys', 40, True, False)
+    font_40 = pygame.font.SysFont('FiexdSys', 40, True, False)
+    text_title = font_40.render('PyCar : Racing Car Game', True, BLACK)
+    screen.blit(text_title, [draw_x, draw_y])
+    text_score = font_40.render('Score: ' + str(score), True, WHITE)
+    screen.blit(text_score, [draw_x, draw_y + 70])
+    text_start = font_40.render('Press Space Key to Start', True, RED)
+    screen.blit(text_start, [draw_x, draw_y + 140])
+    pygame.display.flip()
+
+def draw_score():
+    font_30 = pygame.font.SysFont('FixedSys', 30, True, False)
+    text_score = font_30.render('Score:'+str(score), True, BLACK)
+    screen.blit(text_score, [15, 15])
+
+
 if __name__ == '__main__':
     pygame.init()
 
     screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
     pygame.display.set_caption("Pycar : Jinyoung Racing Car game")
-    clock = pygame.time.clock()
-
+    clock = pygame.time.Clock()
+    # Game Sound
     pygame.mixer.music.load('race.wav')
     sound_crash = pygame.mixer.Sound('crash.wav')
     sound_engine = pygame.mixer.Sound('engine.wav')
-
-    player = Car(WINDOW_WIDTH / 2), (WINDOW_HEIGHT - 150), 0, 0) 
+    # Create User Racing Car 
+    player = Car(WINDOW_WIDTH / 2, (WINDOW_HEIGHT - 150), 0, 0) 
     player.load_image() 
 
+    # Create Computer Racing Car
     cars = []
     car_count = 3
     for i in range(car_count):
         x = random.randrange(0, WINDOW_WIDTH-55)
         y = random.randrange(-150, -50)
-        car = Car(x, y, 0, random.randint(5, 10))
+        car = Car(x, random.randrange(-150, -50), 0, random.randint(5, 10))
         car.load_image()
         cars.append(car)
 
@@ -78,7 +100,7 @@ if __name__ == '__main__':
     lane_x = (WINDOW_WIDTH - lane_width) /2 
     lane_y = -10
     for i in range(lane_count):
-        lane.append([lane_x, lane_y])
+        lanes.append([lane_x, lane_y])
         lane_y += lane_height + lane_margin
 
     score = 0
@@ -94,8 +116,8 @@ if __name__ == '__main__':
                 if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
                     crash = False
                     for i in range(car_count):
-                        car[i].x = random.randrange(0, WINDOW_WIDTH - cars[i].width)
-                        car[i].y = random.randrange(-150, -50)
+                        cars[i].x = random.randrange(0, WINDOW_WIDTH - cars[i].width)
+                        cars[i].y = random.randrange(-150, -50)
                         cars[i].load_image()
 
                     player.load_image()
@@ -124,7 +146,7 @@ if __name__ == '__main__':
 
         if not crash:
             for i in range(lane_count):
-                pygame.draw.rect(screen, WHITE, [lanes[i][0]], lanes[i][1], lane_width, lane_height])
+                pygame.draw.rect(screen, WHITE, [lanes[i][0], lanes[i][1], lane_width, lane_height])
                 lanes[i][1] += 10
                 if lanes[i][1] > WINDOW_HEIGHT:
                     lanes[i][1] = -40 - lane_height 
@@ -138,6 +160,28 @@ if __name__ == '__main__':
                 cars[i].y += cars[i].dy
                 if cars[i].y > WINDOW_HEIGHT:
                     score += 10
+                    cars[i].x = random.randrange(0, WINDOW_WIDTH - cars[i].width)
                     cars[i].y = random.randrange(-150, -50)
-                    cars[i].x = random.randrange(0, )
+                    cars[i].dy = random.randint(4, 9)
+                    cars[i].load_image()
+
+            for i in range(car_count):
+                if player.check_crash(cars[i]):
+                    crash = True
+                    pygame.mixer.music.stop()
+                    sound_crash.play()
+                    sleep(2)
+                    pygame.mouse.set_visible(True)
+                    break
+
+            draw_score()
+            pygame.display.flip()
+
+        else:
+            draw_main_menu()
+        
+        clock.tick(60)
+    
+    pygame.quit()
+
 
