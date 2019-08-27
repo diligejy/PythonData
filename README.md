@@ -19,4 +19,4 @@
 - 파이썬 업무자동화 관련
 
 ## PyCar
-- 파이썬 레이싱 게임 (이수안님의 강의 영상 : 
+- 파이썬 레이싱 게임 (이수안님의 강의 영상 : https://www.youtube.com/watch?v=37a7cBmCvB8)
