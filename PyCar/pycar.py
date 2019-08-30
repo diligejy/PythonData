@@ -136,7 +136,7 @@ if __name__ == '__main__':
                     elif event.key == pygame.K_LEFT:
                         player.dx = -4
                 
-                if event.type == pygame.KEYUP: # 키를 뗏을 때
+                if event.type == pygame.KEYUP: # 키를 뗐을 때
                     if event.key == pygame.K_RIGHT:
                         player.dx = 0
                     elif event.key == pygame.K_LEFT:
