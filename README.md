@@ -14,6 +14,7 @@
 
 ## Finance
 - 금융 분석 관련 
+- ### PythonFinance : 파이썬을 활용한 금융공학 레시피(https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=147909705) 실습
 
 ## python_automate
 - 파이썬 업무자동화 관련
