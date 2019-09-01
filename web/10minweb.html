@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      .nav {
+        height : 70px;
+        border-bottom : 1px solid black;
+        display : flex;
+        align-items : center;
+      }
+      .nav-right-items{
+        display : flex;
+        margin-left : auto;
+      }
+      .nav-item{
+        margin-left : 10px;
+      }
+
+      .title {
+        text-align : center;
+        font-size : 3.5rem;
+        font-weight : bold;
+      }
+
+      .subtitle{
+        text-align : center;
+        font-size : 1.25rem;
+        font-weight : 300;
+      }
+
+      .main {
+        width : 1000px;
+        margin : 0 auto;
+        margin-top : 60px;
+      }
+      .prices{
+        display : flex;
+        align-items : center;
+      }
+      .price-item{
+        width : 300px;
+        height : 300px;
+        border : 1px solid black;
+        margin : 20px;
+        border-radius : 4px;
+        text-align : center;
+
+      }
+      .price-item-title{
+        font-size : 1.5rem;
+        background-color: rgba(0,0,0,.03);
+        text-align : center;
+        height : 53px;
+        line-height : 53px;
+        border-bottom : 1px solid black;
+      }
+      .price-item-price{
+        font-size : 2.5rem;
+        font-weight : bold;
+        padding : 20px;
+      }
+
+      .price-item-button{
+        color: #007bff;
+        background-color: transparent;
+        background-image: none;
+        border-color: #007bff;
+        padding: .5rem 1rem;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        border-radius: .3rem;
+        margin-top : 30px;
+      }
+      .price-item-button--active{
+
+        background-color : #007bff;
+        color : white;
+      }
+      .price-item-mouth {
+        font-size : 16px;
+        color : gray;
+      }
+      .price-item-detail {
+        margin-bottom : 5px;
+        font-size : 18px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class = "nav">
+      <div class = "nav-right-items">
+
+      <div class = "nav-item"> 메뉴1</div>
+      <div class = "nav-item"> 메뉴2</div>
+      <div class = "nav-item"> 메뉴3</div>
+      <div class = "nav-item"> 메뉴4</div>
+      </div>
+
+    </div>
+    <div class = "main">
+      <div class = "title">
+        Pricing
+      </div>
+      <div class = "subtitle">
+        Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.
+      </div>
+
+      <div class = "prices">
+        <div class = "price-item">
+          <div class = "price-item-title">
+            Free
+          </div>
+          <div class = "price-item-price">
+            $0 <span class = "price-item-mouth">/ mo</span>
+          </div>
+          <div class = "price-item-detail">
+            10 users included
+            2 GB of storage
+            Email support
+            Help center access
+          </div>
+          <button class = "price-item-button">
+            Sign Up For Free
+          </button>
+        </div>
+        <div class = "price-item">
+          <div class = "price-item-title">
+            Pro
+          </div>
+          <div class = "price-item-price">
+            $15 <span class = "price-item-mouth">/ mo</span>
+          </div>
+          <div class = "price-item-detail">
+            20 users included
+            10 GB of storage
+            Priority email support
+            Help center access
+          </div>
+          <button class = "price-item-button price-item-button--active">
+            Get started
+          </button>
+        </div>
+        <div class = "price-item">
+          <div class = "price-item-title">
+            Enterprise
+          </div>
+          <div class = "price-item-price">
+            $29 <span class = "price-item-mouth">/ mo</span>
+          </div>
+          <div class = "price-item-detail">
+            30 users included
+            15 GB of storage
+            Phone and email support
+            Help center access
+          </div>
+          <button class = "price-item-button price-item-button--active">
+            Get started
+          </button>
+        </div>  
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
