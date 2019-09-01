@@ -17,7 +17,7 @@
 - #### PythonFinance : 파이썬을 활용한 금융공학 레시피(https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=147909705) 실습
 
 ## python_automate
-- 파이썬 업무자동화 관련
+- 파이썬 업무자동화, 크롤링 관련
 
 ## PyCar
 - 파이썬 레이싱 게임 (이수안님의 강의 영상 : https://www.youtube.com/watch?v=37a7cBmCvB8)
