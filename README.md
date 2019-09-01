@@ -21,3 +21,7 @@
 
 ## PyCar
 - 파이썬 레이싱 게임 (이수안님의 강의 영상 : https://www.youtube.com/watch?v=37a7cBmCvB8)
+
+## web
+- 프론트, 백엔드 등 잡다구닝
+- 10minweb 파일은 (https://www.youtube.com/watch?v=RK5foxPm5GA) 이거 보고 만듬 
