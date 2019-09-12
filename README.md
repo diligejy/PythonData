@@ -27,4 +27,6 @@
 
 ## web
 - 프론트, 백엔드 등 잡다구닝
-- 10minweb 파일은 (https://www.youtube.com/watch?v=RK5foxPm5GA) 이거 보고 만듬 
+- 10minweb 파일은 (https://www.youtube.com/watch?v=RK5foxPm5GA) 이거 보고 만듬
+- Instaclone (http://edu.goorm.io/learn/lecture/13869/%25EC%2597%25B0%25EC%259E%25AC-%25EC%2598%25A4%25ED%2594%2588-80-%25ED%2595%25A0%25EC%259D%25B8-%25EB%2582%25B4-%25EC%2586%2590%25EC%259C%25BC%25EB%25A1%259C-%25ED%2595%259C%25EB%2595%2580%25ED%2595%259C%25EB%2595%2580-%25EB%25A7%258C%25EB%2593%259C%25EB%258A%2594-%25EC%259D%25B8%25EC%258A%25A4%25ED%2583%2580%25ED%2581%25B4%25EB%25A1%25A0-%25EA%25B0%2595%25EC%259D%2598-with-django-2-x-html5-css3-js-es6)
+
