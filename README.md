@@ -15,6 +15,7 @@
 ## Finance
 - 금융 분석 관련 
 - #### PythonFinance : 파이썬을 활용한 금융공학 레시피(https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=147909705) 실습
+- #### quant_strategy : 퀀트전략 파이썬으로 세워라 실습中
 
 ## python_automate
 - 파이썬 업무자동화, 크롤링 관련
